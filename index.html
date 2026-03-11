@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>--Loving Homes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div id="welcompoup" class="popup-overlay">
+        <div class="popup-cont">
+            <h2>مرحبا بك </h2>
+            <p>اكتشف </p>
+            <button class="pt1" onclick="closepopup()">اكتشف الان</button>
+        </div>
+    </div>
+
+    <header id="header">
+        <nav class="navbar">
+            <a href="index.html"><img src="./Images/dog house.avif" class="logo" alt="شعار المنتجع"></a>
+            <ul>
+                <li><a href="facilities.html">المرافق</a></li>
+                <li><a href="pakages.html">الحزم</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+                <li><a href="login.html">الدخول</a></li>
+            </ul>
+            <p id="clock">00:00:00</p>
+        </nav>
+    </header>
+    <main id="main-content">
+        <section class="section-Home">
+            <img src="Images/dog.webp" alt="background-Golf" class="bg-img">
+            <div class="hero-content">
+                <h1 class="fade-in">مرحبا بكم في موقع Loving Homes للكلاب </h1>
+                <p class="fade-in-dealy">نشتهر في رعايتنا الخاصه للكلاب</p>
+                <div class="hero-btns">
+                    <a href="packages.html" class="gold-btn"> احجز الآن</a>
+                    <a href="facilities.html" class="outline-btn">استكشف المرافق </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="grid-container">
+                <div class="intro-text">
+                    <h2>تجربة لا تنسى</h2>
+                    <p>استمتع معنا في الموقع </p>
+                </div>
+                <video class="golf-video" autoplay muted loop controls>
+                    <source src="videos/videoplayback.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+    </main>
+    <footer class="simple-footer">
+        <div class="footer-container">
+            <div class="footer-copyright">
+                <p>&copy; 2024 فندق <span>Loving Homes</span> للكلاب. جميع الحقوق محفوظة.</p>
+            </div>
+            <div class="social-links">
+                <a href="https://www.facebook.com" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a> 
+                <a href="https://www.instagram.com" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a> 
+                <a href="https://www.twitter.com" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a> 
+                <a href="https://www.whatsapp.com" aria-label="Whatsapp"><i class="fa-brands fa-whatsapp"></i></a> 
+            </div>
+        </div>
+    </footer>
+
+    <div class="accessibility-bar">
+        <button onclick="zoomIn()">تكبير</button>
+        <button onclick="zoomOut()">تصغير</button>
+        <div class="color-picker-wrapper">
+            <input type="color" id="bgPicker" onchange="changeTheme()">
+        </div>
+    </div>
+
+    <script src="JS/script.js"></script>
+</body>
+</html>

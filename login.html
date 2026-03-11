@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول | Loving Homes</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <header id="header">
+        <nav class="navbar">
+            <a href="index.html">
+                <img src="./Images/dog house.avif" class="logo" alt="شعار المنتجع">
+            </a>
+            
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="packages.html">الحزم</a></li>
+                <li><a href="facilities.html">المرافق</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+                <li><a href="login.html">الدخول</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main class="container">
+        <section>
+            <div class="form-contact">
+                <h2 style="text-align:center;">تسجيل الدخول</h2>
+                <p style="text-align:center; margin-bottom:20px;">
+                    قم بإدخال بياناتك للدخول إلى حسابك
+                </p>
+
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label><i class="fas fa-envelope"></i> البريد الإلكتروني</label>
+                        <input type="email" id="loginEmail" required placeholder="example@mail.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fas fa-lock"></i> كلمة المرور</label>
+                        <input type="password" id="loginPass" required placeholder="********">
+                    </div>
+
+                    <button type="button" class="gold-btn" style="width:100%; cursor: pointer;" onclick="loginUser()">
+                        دخول
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
