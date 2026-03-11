@@ -1,0 +1,622 @@
+*{
+    margin: 0; /* إلغاء الهوامش الخارجية لكل العناصر */
+    padding: 0; /* إلغاء الهوامش الداخلية لكل العناصر */
+    box-sizing: border-box; /* حساب الحدود ضمن عرض العنصر */
+}
+
+body {
+    background-color: rgba(233, 230, 233, 0.867); /* لون خلفية الصفحة */
+    color: rgb(32, 34, 34); /* لون النصوص العام */
+    overflow-x: hidden; /* منع التمرير العرضي عند التكبير */
+}
+
+ul {
+    list-style: none; /* إزالة النقط من القوائم */
+}
+
+/*heder start */
+#header {
+    background-color: rgb(231, 156, 203); /* لون خلفية الرأس (الهيدر) */
+    position: fixed; /* تثبيت الهيدر في أعلى الشاشة */
+    width: 100%; /* عرض الهيدر بكامل الشاشة */
+    z-index: 1000; /* جعل الهيدر فوق كل العناصر */
+    border-bottom: 1px solid black; /* خط أسود أسفل الهيدر */
+}
+
+#header .navbar {
+    display: flex; /* ترتيب العناصر بجانب بعضها */
+    justify-content: space-between; /* توزيع المسافات بين العناصر */
+    align-items: center; /* توسيط العناصر عمودياً */
+    max-width: 1100px; /* العرض الأقصى للهيدر */
+    margin: auto; /* توسيط الهيدر أفقياً */
+    height: 90px; /* ارتفاع الهيدر */
+}
+
+/* تعديل الشعار ليصبح مربعاً بحواف ناعمة مريحة للعين */
+#header .navbar .logo {
+    height: 75px; 
+    width: 75px;
+    object-fit: cover; /* لضمان عدم تشوه الصورة */
+    border-radius: 18px; /* الحواف المائلة والناعمة */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* إطار خفيف جداً */
+    transition: 0.3s ease;
+}
+
+#header .navbar .logo:hover {
+    border-radius: 25px; /* زيادة النعومة عند مرور الماوس */
+    transform: scale(1.05);
+}
+
+#header .navbar ul { 
+    display: flex; /* وضع روابط القائمة بجانب بعضها */
+}
+
+#header .navbar li a {
+    text-decoration: none; /* إزالة الخط تحت الروابط */
+    color: rgb(16, 16, 20); /* لون خط الروابط */
+    font-weight: 700; /* جعل الخط عريض */
+    margin: 0 15px; /* مسافة بين الروابط */
+}
+
+#header .navbar li a:hover {
+    color: #c2b8b8; /* تغيير لون الرابط عند مرور الماوس */
+    transition: 0.3s; /* نعومة في تغيير اللون */
+}
+
+#clock {
+    font-weight: bold; /* خط عريض للساعة */
+    color: #131111; /* لون الساعة */
+}
+
+/*زر البحث */
+.search-box {
+    display: flex; /* وضع حقل النص والزر بجانب بعضهما */
+    align-items: center; /* توسيط عمودي */
+    gap: 5px; /* مسافة بين الحقل والزر */
+}
+
+.search-box input {
+    padding: 5px 8px; /* مسافة داخلية للكتابة */
+    border: 1px solid #4e4949; /* إطار حقل البحث */
+    border-radius: 5px; /* زوايا مستديرة للحقل */
+}
+
+.btn-search {
+    background-color: antiquewhite; /* لون خلفية زر البحث */
+    font-size: 16px; /* حجم خط البحث */
+    width: 65px; /* عرض الزر */
+    height: 22px; /* ارتفاع الزر */
+    text-align: center; /* توسيط النص داخل الزر */
+    border-radius: 7px; /* زوايا مستديرة للزر */
+    cursor: pointer; /* شكل الماوس عند الوقوف على الزر */
+    border: none; /* إزالة الإطار */
+}
+
+.btn-search:hover {
+    background-color: rgb(231, 156, 203); /* لون الزر عند مرور الماوس */
+}
+/*header End*/
+
+.simple-footer {
+    background-color: #555454; /* لون خلفية أسفل الصفحة */
+    color: #ffffff; /* لون خط أسفل الصفحة */
+    padding: 20px 0; /* مسافات داخلية للفوتر */
+    font-family: 'Arial', sans-serif; /* نوع الخط */
+    border-top: 3px solid #f280ee; /* خط وردي أعلى الفوتر */
+}
+
+.footer-container {
+    display: flex; /* ترتيب عناصر الفوتر */
+    justify-content: space-between; /* توزيع العناصر على الأطراف */
+    align-items: center; /* توسيط عمودي */
+    max-width: 1200px; /* العرض الأقصى للفوتر */
+    margin: 0 auto; /* توسيط الفوتر */
+    padding: 0 20px; /* هوامش جانبية */
+    flex-wrap: wrap; /* جعل العناصر تتجاوب مع الشاشات الصغيرة */
+}
+
+.footer-copyright p {
+    margin: 0; /* إزالة الهوامش */
+    font-size: 1rem; /* حجم الخط */
+}
+
+.footer-copyright span {
+    color: #d784b1; /* لون اسم الفندق */
+    font-weight: bold; /* خط عريض */
+}
+
+.social-links a {
+    color: white; /* لون أيقونات التواصل */
+    font-size: 1.5rem; /* حجم الأيقونات */
+    margin-left: 15px; /* مسافة بين الأيقونات */
+    transition: color 0.3s ease; /* نعومة التغيير */
+}
+
+.social-links a:hover {
+    color: #ea9edc; /* لون الأيقونة عند الوقوف عليها */
+}
+
+@media (max-width: 600px) {
+    .footer-container {
+        flex-direction: column; /* جعل الفوتر عمودي في الموبايل */
+        gap: 15px; /* مسافة بين العناصر */
+        text-align: center; /* توسيط النصوص */
+    }
+}
+
+/*Section start*/
+.section-Home {
+    height: 100vh; /* طول القسم بكامل الشاشة */
+    position: relative; /* وضع نسبي للعناصر داخل القسم */
+    display: flex; /* ترتيب المحتوى */
+    align-items: center; /* توسيط عمودي */
+    justify-content: center; /* توسيط أفقي */
+    text-align: center; /* توسيط النصوص */
+    color: rgb(0, 0, 0); /* لون النص */
+}
+
+.bg-img {
+    position: absolute; /* تثبيت الصورة كخلفية للقسم */
+    width: 100%; /* العرض الكامل */
+    height: 100%; /* الارتفاع الكامل */
+    object-fit: cover; /* تغطية المساحة دون تشويه */
+    z-index: -1; /* جعل الصورة خلف النصوص */
+}
+
+.hero-content h1 {
+    font-size: 3.5rem; /* حجم عنوان الصفحة الكبيرة */
+    margin-bottom: 20px; /* مسافة أسفل العنوان */
+    text-shadow: 2px 2px 18px rgb(16, 16, 20); /* ظل للنص */
+}
+
+.hero-btns {
+    display: flex; /* وضع الأزرار بجانب بعضها */
+    justify-content: center; /* توسيط الأزرار */
+    gap: 10px; /* مسافة بين الأزرار */
+    margin-top: 30px; /* مسافة أعلى الأزرار */
+}
+
+.gold-btn, .outline-btn, .btn-search-shop {
+    background-color: #c2b8b8; /* لون خلفية الأزرار */
+    padding: 15px 0; /* مسافات داخلية */
+    font-size: 1.1rem; /* حجم الخط */
+    font-weight: 700; /* خط عريض */
+    text-align: center; /* توسيط النص */
+    text-decoration: none; /* إزالة الخط السفلي */
+    border-radius: 8px; /* زوايا مستديرة */
+    transition: all 0.3s ease; /* نعومة الحركة */
+    min-width: 180px; /* أقل عرض مسموح للزر */
+}
+
+.gold-btn {
+    background: #c2b8b8; /* لون الزر */
+    color: antiquewhite; /* لون النص داخل الزر */
+    padding: 12px 0; /* مسافة داخلية */
+    border: none; /* حدود الزر */
+    border-radius: 5px; /* زوايا مستديرة */
+    cursor: pointer; /* شكل الماوس */
+    text-decoration: none; /* إزالة خط الرابط */
+    font-weight: bold; /* خط عريض */
+    transition: 0.3s; /* سرعة الحركة */
+    width: 100px; /* عرض الزر */
+}
+
+.gold-btn:hover, .btn-search-shop-hover {
+    background: #c2b8b8; /* اللون عند الوقوف بالماوس */
+    border-color: antiquewhite; /* تغيير لون الإطار */
+    border-radius: 25px; /* زيادة استدارة الزوايا */
+    border: solid; /* تفعيل الإطار */
+    box-shadow: 0 5px; /* إضافة ظل */
+}
+
+.container {
+    display: block; /* جعل الحاوية ككتلة */
+    padding-top: 150px; /* مسافة علوية للمحتوى */
+    padding-bottom: 100px; /* مسافة سفلية للمحتوى */
+    max-width: 1100px; /* العرض الأقصى للحاوية */
+    margin: auto; /* توسيط الحاوية */
+    padding-left: 20px; /* هوامش جانبية */
+    padding-right: 20px; /* هوامش جانبية */
+}
+
+.intro-text p {
+    margin-bottom: 15px; /* مسافة أسفل الفقرة */
+    line-height: 1.8; /* تباعد الأسطر */
+    font-size: 1.1rem; /* حجم خط الفقرة */
+}
+
+.golf-video {
+    width: 100%; /* فيديو بعرض كامل الحاوية */
+    max-height: 500px; /* أقصى ارتفاع للفيديو */
+}
+
+.popup-overlay {
+    display: none; /* إخفاء النافذة المنبثقة افتراضياً */
+    position: fixed; /* تثبيت النافذة في الشاشة */
+    width: 100%; /* العرض الكامل */
+    height: 100%; /* الارتفاع الكامل */
+    z-index: 999; /* جعل النافذة فوق كل شيء */
+    justify-content: center; /* توسيط أفقي */
+    align-items: center; /* توسيط عمودي */
+}
+
+.popup-cont {
+    background-color: azure; /* لون خلفية النافذة */
+    padding: 40px; /* مسافات داخلية */
+    border-radius: 15px; /* زوايا مستديرة */
+    text-align: center; /* توسيط النص */
+    max-width: 500px; /* العرض الأقصى */
+    width: 90px; /* العرض */
+    box-shadow: 0 10px 30px rgb(15, 12, 11); /* ظل للنافذة */
+    animation: forwards 0.4s ease-out; /* حركة دخول النافذة */
+}
+
+.popup-cont h2 {
+    color: #0d0c0c; /* لون عنوان النافذة */
+}
+
+.pt1 {
+    background-color: bisque; /* لون الزر داخل النافذة */
+    color: #e68989; /* لون النص */
+    border: none; /* إزالة الحدود */
+    padding: 12px 30px; /* مسافات داخلية */
+    border-radius: 8px; /* زوايا مستديرة */
+    font-weight: bold; /* خط عريض */
+    cursor: pointer; /* شكل الماوس */
+    transition: 0.3s; /* سرعة الحركة */
+}
+
+/*صفحه المرافق*/
+.grid-facilities {
+    display: grid; /* استخدام نظام الشبكة للمرافق */
+    grid-template-columns: repeat(3, 1fr); /* 3 أعمدة متساوية */
+    gap: 25px; /* مسافة بين الصور */
+    margin: 30px auto; /* هوامش خارجية */
+    max-width: 1200px; /* عرض الشبكة */
+}
+
+.card {
+    border-radius: 12px; /* زوايا مستديرة للبطاقة */
+    overflow: hidden; /* إخفاء المحتوى الخارج عن الحدود */
+    box-shadow: 0 4px 15px rgb(7, 7, 7); /* ظل للبطاقة */
+    transition: transform 0.3s ease; /* سرعة حركة التكبير */
+    display: flex; /* ترتيب محتوى البطاقة */
+    flex-direction: column; /* ترتيب عمودي */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* تحريك البطاقة قليلاً عند الوقوف عليها */
+}
+
+.card-img {
+    width: 100%; /* عرض الصورة بالكامل */
+    height: 250px; /* ارتفاع الصورة */
+    object-fit: cover; /* تغطية المساحة بالصورة */
+}
+
+.card-body {
+    padding: 20px; /* مسافة داخلية لنص البطاقة */
+    flex-grow: 1; /* جعل المحتوى يأخذ المساحة المتبقية */
+    display: flex; /* ترتيب */
+    flex-direction: column; /* عمودي */
+    justify-content: space-between; /* توزيع المسافات */
+}
+
+.card-body .gold-btn {
+    padding: 8px 20px; /* مسافة داخلية لزر البطاقة */
+    font-size: 0.9rem; /* حجم الخط */
+    margin-top: 15px; /* مسافة علوية للزر */
+    width: 100%; /* الزر يأخذ عرض البطاقة */
+}
+
+/* ============================================================
+   شريط الوصول السهل - تصميم موحد (دائري تماماً)
+   ============================================================ */
+.accessibility-bar {
+    position: fixed !important; 
+    left: 20px !important;    /* تثبيت الشريط جهة اليسار */
+    right: auto !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;     /* مسافة متناسقة بين الأزرار */
+    z-index: 10000000 !important; /* لضمان ظهوره فوق كل شيء */
+}
+
+/* توحيد شكل الأزرار وحاوية مختار الألوان */
+.accessibility-bar button, 
+.color-picker-wrapper {
+    width: 55px !important;   /* عرض موحد */
+    height: 55px !important;  /* ارتفاع موحد */
+    border-radius: 50% !important; /* شكل دائري تماماً */
+    border: 3px solid #d095c8 !important; /* إطار وردي واضح */
+    background-color: white !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2) !important; /* ظل لإعطاء عمق */
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;         /* لإخفاء حواف أداة اختيار اللون */
+    padding: 0 !important;    /* إلغاء أي مسافات داخلية */
+    transition: transform 0.2s ease;
+}
+
+.accessibility-bar button:hover, 
+.color-picker-wrapper:hover {
+    transform: scale(1.1);    /* تأثير تكبير بسيط عند المرور */
+}
+
+/* تعديل أداة اختيار اللون لتملأ الدائرة تماماً */
+#bgPicker {
+    width: 200% !important;   /* تكبير الأداة لتغطية كامل مساحة الدائرة */
+    height: 200% !important;
+    cursor: pointer;
+    border: none !important;
+    outline: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: none !important;
+    appearance: none;         /* إزالة الشكل الافتراضي للمتصفح */
+    -webkit-appearance: none;
+}
+
+/* إخفاء الحواف القبيحة داخل مختار الألوان في متصفحات كروم */
+#bgPicker::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+#bgPicker::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
+}
+
+/* 
+   تنسيق نموذج التواصل (Contact Form)
+   */
+.form-contact {
+    max-width: 470px;         /* العرض الأقصى للنموذج */
+    background: #c2b8b8;      /* لون الخلفية الرمادي المعتمد */
+    padding: 40px;            /* زيادة المسافة الداخلية */
+    margin: 50px auto;        /* توسيط مع مسافة علوية وسفلية */
+    border-radius: 15px;      /* زوايا مستديرة ناعمة */
+    box-shadow: 0 20px 50px rgba(231, 156, 203, 0.4); /* ظل وردي متناسق مع الهوية */
+}
+
+.form-group {
+    margin-bottom: 20px;      /* مسافة بين الحقول */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #a8a0a0; /* إطار أغمق قليلاً للوضوح */
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.9); /* خلفية بيضاء شبه شفافة للحقول */
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: #d095c8;    /* تغيير لون الإطار عند الكتابة */
+}
+
+/*تنسيق التابلت والموبايل*/
+@media screen and (max-width: 1024px) {
+    #header {
+        height: auto; 
+        position: fixed; 
+        z-index: 1000; 
+    }
+    #header .navbar {
+        flex-direction: column; 
+        height: auto; 
+        padding: 10px 5px; 
+        gap: 8px; 
+    }
+    #header .navbar .logo {
+        height: 45px; 
+        width: 45px;
+    }
+    #header .navbar ul {
+        flex-wrap: wrap; 
+        justify-content: center; 
+        gap: 5px; 
+    }
+    #header .navbar ul a {
+        margin: 0 5px; 
+        font-size: 13px; 
+    }
+    .search-box {
+        width: 100%; 
+        justify-content: center; 
+        gap: 5px; 
+    }
+    .search-box input {
+        width: 50%; 
+        height: 30px; 
+    }
+    #clock {
+        font-size: 13px; 
+        background: #000; 
+        padding: 2px 8px; 
+        border-radius: 4px; 
+        color: #fff;
+    }
+    main {
+        padding-top: 230px; 
+    }
+    .hero-content h1 {
+        font-size: 1.6rem; 
+        margin-bottom: 10px; 
+    }
+    .intro-videp {
+        width: 100%; 
+        padding: 10px; 
+    }
+    .golf-video {
+        width: 100%; 
+        height: auto; 
+        max-width: 600px; 
+        margin: auto; 
+        display: block; 
+    }
+    .grid-container {
+        display: flex; 
+        flex-direction: column; 
+        text-align: center; 
+    }
+    .form-container {
+        width: 90%; 
+        margin: 40px auto; 
+        padding: 25px; 
+    }
+}
+
+.packages-main-wrapper {
+    direction: rtl; /* اتجاه الصفحة من اليمين لليسار */
+    padding: 120px 20px 60px; /* هوامش علوية وسفلية */
+    background-color: rgba(233, 230, 233, 0.867); 
+    font-family: sans-serif; 
+}
+
+.main-title {
+    text-align: center; 
+    color: rgb(32, 34, 34); 
+    margin-bottom: 50px; 
+    font-size: 32px; 
+}
+
+.packages-grid {
+    display: flex; 
+    justify-content: center; 
+    gap: 25px; 
+    flex-wrap: wrap; 
+}
+
+.package-card {
+    background: #fff; 
+    border-radius: 15px; 
+    width: 310px; 
+    padding: 25px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+    text-align: right; 
+    border-top: 10px solid; 
+    display: flex; 
+    flex-direction: column; 
+    transition: 0.3s; 
+}
+
+.package-card:hover {
+    transform: translateY(-8px); 
+}
+
+.pink-border { border-top-color: rgb(231, 156, 203); } 
+.gray-border { border-top-color: rgb(231, 156, 203); } 
+
+.card-header {
+    font-size: 24px; 
+    font-weight: bold; 
+    margin-bottom: 20px; 
+}
+
+.package-list {
+    list-style: none; 
+    padding: 0; 
+    margin-bottom: 25px; 
+    flex-grow: 1; 
+}
+
+.package-list li {
+    padding: 10px 0; 
+    border-bottom: 1px solid #f0f0f0; 
+    color: #444; 
+    font-size: 16px; 
+}
+
+.package-list li:before {
+    content: "🐾 "; 
+    color: rgb(231, 156, 203); 
+}
+
+.book-btn {
+    display: block; 
+    text-align: center; 
+    padding: 12px; 
+    border-radius: 8px; 
+    text-decoration: none; 
+    font-weight: bold; 
+    color: #000; 
+}
+
+.pink-btn { background: rgb(231, 156, 203); } 
+.gray-btn { background: rgb(231, 156, 203); } 
+
+.stats-bar {
+    display: flex; 
+    justify-content: center; 
+    gap: 40px; 
+    margin: 60px auto 30px; 
+    background: #fff; 
+    padding: 25px; 
+    border-radius: 15px; 
+    max-width: 800px; 
+}
+
+.stat-item { text-align: center; } 
+.stat-item span { font-size: 26px; font-weight: bold; color: rgb(231, 156, 203); display: block; } 
+.stat-item p { font-size: 14px; color: #666; margin: 0; } 
+
+.info-footer {
+    text-align: center; 
+    color: #555; 
+    font-size: 15px; 
+    max-width: 800px; 
+    margin: 30px auto; 
+}
+
+.package-price {
+    font-size: 20px; 
+    font-weight: bold; 
+    color: #000000; 
+    text-align: center; 
+    margin-bottom: 15px; 
+}
+
+.featured .package-price {
+    color: rgb(0, 0, 0); 
+}
+
+/* التكبير للمحتوى الرئيسي فقط */
+main {
+    transition: transform 0.3s ease; 
+    width: 100%;
+}
+.grid-facilities{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+/* عند فتح الموقع على التلفون */
+@media (max-width:768px){
+
+.grid-facilities{
+    grid-template-columns: repeat(2,1fr);
+}
+
+.card img{
+    width:100%;
+    height:auto;
+}
+
+}
